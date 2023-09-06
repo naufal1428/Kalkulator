@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/judulTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="KALKULATOR"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="48sp"
+        android:layout_marginTop="20dp"/>
+
+
+    <TextView
+        android:id="@+id/inputAngka1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/inputAngka2"
+        android:text=""
+        android:background="@color/grey"
+        android:textSize="48sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/inputAngka2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/hasilTextView"
+        android:text=""
+        android:background="@color/grey"
+        android:textSize="48sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/hasilTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/gridLayout"
+        android:background="@color/grey"
+        android:text="0"
+        android:textSize="80sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:layout_alignParentBottom="true">
+
+        <!-- Baris 1 -->
+        <Button
+            android:id="@+id/btn7"
+            style="@style/CalculatorButtonStyle"
+            android:text="7"
+            android:layout_columnWeight="1"
+            android:onClick="inputNilai"/>
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="8"
+            android:onClick="inputNilai"/>
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="9"
+            android:onClick="inputNilai"/>
+
+        <Button
+            android:id="@+id/btnDivide"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="/"
+            android:onClick="operator"/>
+
+        <!-- Baris 2 -->
+        <Button
+            android:id="@+id/btn4"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="4"
+            android:onClick="inputNilai"/>
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="5"
+            android:onClick="inputNilai"/>
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="6"
+            android:onClick="inputNilai"/>
+
+        <Button
+            android:id="@+id/btnMultiply"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="*"
+            android:onClick="operator"/>
+
+        <!-- Baris 3 -->
+        <Button
+            android:id="@+id/btn1"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="1"
+            android:onClick="inputNilai"/>
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="2"
+            android:onClick="inputNilai"/>
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="3"
+            android:onClick="inputNilai"/>
+
+        <Button
+            android:id="@+id/btnSubtract"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="-"
+            android:onClick="operator"/>
+
+        <!-- Baris 4 -->
+        <Button
+            android:id="@+id/btnClear"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="C"
+            android:onClick="onClearClick"/>
+
+        <Button
+            android:id="@+id/btn0"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="0"
+            android:onClick="inputNilai"/>
+
+        <Button
+            android:id="@+id/btnAdd"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="+"
+            android:onClick="operator"/>
+
+        <Button
+            android:id="@+id/btnEquals"
+            style="@style/CalculatorButtonStyle"
+            android:layout_columnWeight="1"
+            android:text="="
+            android:onClick="onEqualClick"/>
+
+    </GridLayout>
+
+</RelativeLayout>
